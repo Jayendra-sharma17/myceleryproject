@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result page for checking task</title>
+</head>
+<body>
+    <h1>hii result page are you checking my task</h1>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">about</a></li>
+            <li><a href="{% url 'contact' %}">contact</a></li>
+        </ul>
+    </nav>
+    <br><br>
+     {% if result %}
+     <h5>task id:{{result.id}}</h5>
+    <h5>task id : {{result.task_id}}</h5>
+    <h5>task state: {{result.state}}</h5>
+    <h5>task status : {{result.status}}</h5>
+    <h5>result value : {{result.result}}</h5>
+
+
+
+     {% endif %}
+</body>
+</html>
