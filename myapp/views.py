@@ -5,14 +5,14 @@ from myapp.tasks import sub
 from celery.result import AsyncResult
 # Create your views here.
 # enqueue task using delay
-# def index(request):
-#     print("results")
-#     result1=add.delay(10,20) 
-#     print("result1",result1)
-#     result2=sub.delay(80,20) 
-#     print("result2",result2)
+def index(request):
+    print("results")
+    result1=add.delay(10,20) 
+    print("result1",result1)
+    result2=sub.delay(80,20) 
+    print("result2",result2)
     
-#     return render(request,"myapp/home.html")
+    return render(request,"myapp/home.html")
 
 # enqueue task using apply_async()
 # def index(request):
